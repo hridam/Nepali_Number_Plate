@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block title %}Home{% endblock%}
+
+{% block content %}
+<h1>Live Streamed</h1>
+    <div id="container">
+            <video autoplay id="videoElement" name="video">
+
+            </video>
+    </div>
+
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Access the webcam stream
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(function(stream) {
+            var videoElement = document.getElementById('videoElement');
+            videoElement.srcObject = stream;
+          })
+          .catch(function(error) {
+            console.error('Error accessing the webcam:', error);
+          });
+      </script>
+{% endblock %}

@@ -1,0 +1,12 @@
+names:
+- License-plate
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: neplai_license_plate
+  url: https://universe.roboflow.com/neplailicenseplate/neplai_license_plate/dataset/1
+  version: 1
+  workspace: neplailicenseplate
+test: test/images
+train: train/images
+val: valid/images
